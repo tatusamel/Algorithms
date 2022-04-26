@@ -86,7 +86,7 @@ int dp(vector<int>& startTimes, vector<int>& endTimes, vector<int>& profits){
     }
     
     sort(tasks.begin(), tasks.end(), compareByEndTime);
-    vector<int> p;
+    vector<int> p = pArrayiniBul(tasks);
     int dp[n];
     
     dp[0] = tasks[0].prof;
