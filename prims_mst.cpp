@@ -41,7 +41,6 @@ int prims(){
     }
     
     int total_cost = 0;
-    visited[1] = true;
     
     while ( !pq.empty() ){
         // this is the edge with the minimum lenght
