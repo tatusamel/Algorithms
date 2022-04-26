@@ -50,8 +50,10 @@ int prims(){
         int v = top.second;
         pq.pop();
         
-        total_cost += w;
+        if ( visited[v] )   continue;
         visited[v] = true;// now we visited node v, and we can add the adjacent nodes of node v
+
+        total_cost += w;
         
         for ( auto p : adjList[v] ){
             // v -> from vertex
