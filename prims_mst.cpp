@@ -22,8 +22,8 @@ int prims(){
         int u,v,w;
         cin >> u >> v >> w;
         
-        adjList[u].push_back({w,u});
-        adjList[v].push_back({w,v}); // if it's an undirected graph
+        adjList[u].push_back({w,v});
+        adjList[v].push_back({w,u}); // if it's an undirected graph
         
     }
     // first->weight , second->to-vertex
@@ -39,7 +39,7 @@ int prims(){
         
         pq.push( {-w,v}); // multiply weight by -1, to make it min-heap
     }
-    
+    visited[1] = true;
     int total_cost = 0;
     
     while ( !pq.empty() ){
